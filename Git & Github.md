@@ -176,13 +176,13 @@
 
 ## 3. GitLab (SSAFY)
 
-1. 프로젝트싸피: [Project](https://project.ssafy.com/)
+1. **프로젝트싸피**: [Project](https://project.ssafy.com/)
 
-2. 랩싸피: [Lab](https://lab.ssafy.com/users/sign_in?auto_sign_in=false)
+2. **랩싸피**: [Lab](https://lab.ssafy.com/users/sign_in?auto_sign_in=false)
 
 ---
 
-- 프로젝트: 깃랩에서의 저장소 이름
+- **프로젝트**: 깃랩에서의 저장소 이름
 - 수업자료는 처음에만 클론해서 그 다음부터 풀하면 됨
 - JUST_FULL_HERE 안에서 파일 pull 받기
 - 개인 프로젝트에서 push해서 과제 제출

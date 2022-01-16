@@ -50,7 +50,7 @@
 
 - Git에는 3가지 상태의 공간이 존재
 
-![image-20220113131040116](Git & Github.assets/image-20220113131040116-16420498424441.png)
+![image-20220113131040116-16420498424441](Git & Github.assets/image-20220113131040116-16420498424441.png)
 
 1. **워킹 디렉토리 (Working Directory)** : 일반적으로 작업하는 공간
 
@@ -68,7 +68,26 @@
 
 ---
 
-1. **git init**: 깃이 해당 디렉토리를 관리, 관장
+1. **git init**: 깃이 해당 디렉토리를 관리, 관장하도록 함
+
+- master가 뜨면 깃이 관리를 하고 있는 곳이라는 의미(하위 폴더들도 모두 관리)
+- 주의: 절대로 git init은 중첩해서 사용하면 안된다. 반드시 관리하고자 하는 최상단 폴더에만 적용!
+  - 중첩해서 쓴 부분은 git이 추적할 수 없는 상태
+- 주의: 절대로 루트 디렉토리나 홈 디렉토리에서 git init을 사용하면 안된다.
+  - 컴퓨터의 모든 항목들이 하나의 git이 되어버리기 때문에 해당 로컬에서는 다른 git을 사용할 수 없게 된다.
+  - 만약 이런 실수를 했다면 홈 디렉토리에서 숨길파일의 '`.git`'을 삭제하면 된다.
+
+---
+
+- **gitignore**: 프로젝트에 쓰이지만 공유가 되면 안되는 파일 목록을 넣는다.
+  - git에게 관리 예외파일을 알려주는 것으로 한 번 커밋에 찍힌 변동사항은 계속 관리를 받음
+  - '`.gitignore`'이라는 파일을 생성 후 그 내에 예외하고 싶은 파일 명단을 작성
+  - git init 명령어 사용 직후 쓰는게 가장 바람직하다.
+  - 올리지 않을 파일명단 만들어주는 곳: [gitignoreio](https://www.toptal.com/developers/gitignore/api/windows)
+  - 깃헙에서 관리하는 gitignore 명단: [gitignore](https://github.com/github/gitignore)
+
+---
+
 2. **git status**: 깃의 현재 Working directory와 Staging area 상태 확인
 
 - Staging area의 상태를 확인할 수 있는 유일한 명령어
@@ -146,5 +165,24 @@
 - **잔디심기**: commit이 있는날 초록색으로 표시 (commit의 수가 많을수록 진함)
 
 - **저장소(repository)**: commit 관리 저장소 
-- 보안토큰: 타 로컬의 푸쉬를 막기 위해 깃허브에서 제공하는 보안토큰
-  - 'Windows' - '검색' - '자격증명관리자' - 'Windows자격증명' - '`git:https://github.com`'
+- **보안토큰**: 타 로컬의 푸쉬를 막기 위해 깃허브에서 제공하는 보안토큰
+  - 'Windows' - > '검색' ->  '자격증명관리자' ->  'Windows자격증명' ->  '`git:https://github.com`'
+
+- **'README.md' 파일**: github을 비롯한 원격저장소는 README.md 파일을 저장소에서 미리 보여준다.
+  - 프로젝트 설명에 주로 쓰임
+  - 관리받는 위치에서 최상단에 존재해야 한다.(`.gitignore`과 동일한 위치)
+
+
+
+## 3. GitLab (SSAFY)
+
+1. 프로젝트싸피: [Project](https://project.ssafy.com/)
+
+2. 랩싸피: [Lab](https://lab.ssafy.com/users/sign_in?auto_sign_in=false)
+
+---
+
+- 프로젝트: 깃랩에서의 저장소 이름
+- 수업자료는 처음에만 클론해서 그 다음부터 풀하면 됨
+- JUST_FULL_HERE 안에서 파일 pull 받기
+- 개인 프로젝트에서 push해서 과제 제출

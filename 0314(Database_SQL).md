@@ -35,7 +35,7 @@
   - **테이블**(table): 열(컬럼/ 필드)과 행(레코드/값)의 모델을 사용해 조직된 데이터 요소들의 집합
   - **열**(column): 각 열에는 고유한 데이터 형식이 지정됨
   - **행**(row): 실제 데이터가 저장되는 형태
-  - **기본키**(Primary Key): 각 행(레코드)의 고유 값
+  - **기본키**(Primary Key): 각 행(레코드)의 고유값
     - 반드시 설정해야 하며, 데이터베이스 관리 및 관계설정 시 주요하게 활용 됨 
 
   
@@ -176,7 +176,7 @@
 
   
 
-### **CRUD**
+### **CRUD** (Create/Read/Update/Delete)
 
 ---
 
@@ -337,7 +337,7 @@
 
         ```sqlite
         CREATE TABLE 테이블이름 (
-        id INTEgER PRIMARY KEY AUTOINCREMENT, ...);
+        id INTEGER PRIMARY KEY AUTOINCREMENT, ...);
         ```
 
         

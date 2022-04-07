@@ -237,7 +237,7 @@ class ArticleForm(forms.Form):
 from django import forms
 from .models import Aritcle
 
-class ArticleForm(forms.ModeForm):
+class ArticleForm(forms.ModelForm):
     
     class Meta:
         model = Article

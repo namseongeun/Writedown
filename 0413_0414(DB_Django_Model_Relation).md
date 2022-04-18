@@ -27,7 +27,7 @@
 
 **`ForeignKey` field**
 
-- A **mane-to-one relationship**
+- **A many-to-one relationship**
 - 2개의 위치 인자가 반드시 필요
   1. 참조하는 model class
   2. on_delete 옵션
@@ -364,7 +364,7 @@
 
 #### 댓글 출력
 
-- 특정 article에 있는 몯느 댓글을 가져온 후에 context에 추가
+- 특정 article에 있는 모든 댓글을 가져온 후에 context에 추가
 
   ```python
   # articles / views.py
@@ -568,7 +568,7 @@
 - 일부 프로젝트에서는 Django의 내장 User 모델이 제공하는 인증 요구사항이 적절하지 않을 수 있음
   - 예: username 대신 email을 식별 토큰으로 사용하는 것이  더 적합한 사이트
 - Django는 User를 참조하는데 사용하는 AUTH_USER_MODEL 값을 제공하여, default user model을 재정의할 수 있도록 함
-- Django는 새 프로젝트를 싲가하는 경우 기본 사용자 모델이 충분하더라도, 커스텀 유저 모델을 설정하는 것을 강력하게 권장
+- Django는 새 프로젝트를 시작하는 경우 기본 사용자 모델이 충분하더라도, 커스텀 유저 모델을 설정하는 것을 강력하게 권장
   - 단, 프로젝트의 모든 migrations 혹은 첫 migrate를 실행하기 전에 이 작업을 마쳐야 함
 
 
@@ -1007,4 +1007,3 @@
     </form>
   {% endif %}
   ```
-

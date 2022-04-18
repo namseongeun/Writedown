@@ -14,7 +14,7 @@
 - 데이터베이스로 얻는 장점들
   - 데이터 중복 최소화
   - 데이터 무결성 (정확한 정보)
-  - 데이터 일광선
+  - 데이터 일관성
   - 데이터 독립성
   - 데이터 표준화
   - 데이터 보안유지
@@ -23,7 +23,7 @@
 
 **RDB** (관계형 데이터베이스)
 
-- Realtional Databas
+- Realtional Database
 - **키와 값들의 간단한 관계를 표 형태로 정리한 데이터베이스**
 - 관계형 모델에 기반
 
@@ -159,7 +159,7 @@
 - **특정 테이블의 schema 조회**
 
   ```sqlite
-  sqlite> .schema calssmates
+  sqlite> .schema classmates
   CREATE TABLE classmates (
   id INTEGER PRIMARY KEY,
   name TEXT

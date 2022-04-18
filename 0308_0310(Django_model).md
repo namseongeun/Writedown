@@ -167,8 +167,8 @@
 
 
 - **사용 모델 필드**
-  - DataTimeField
-    - DataField를 상속 받는 클래스
+  - DateTimeField
+    - DateField를 상속 받는 클래스
   - **DataField's options (이거 시험 나옴!!!)**
     - **auto_now_add**
       - **최초 생성일자**
@@ -393,7 +393,7 @@
     - 특정 리소스를 가져오도록 요청할 때 사용
     - 반드시 데이터를 가져올 때만 사용해야 함 
     - DB에 변화를 주지 않음
-    - CRB에서 R 역할을 담당
+    - CRUD에서 R 역할을 담당
     - 쿼리 스프링 파라미터이기 때문에 URL에 작성이 되어야한다.
     - '나 이것 좀 줘~'
 
@@ -403,43 +403,42 @@
     - 서버로 데이터를 전송할 때 사용
     - 리소스를 생성, 변경하기 위해 데이터를 HTTP body에 담아 전송
     - POST의 return 함수는 render가 아닌 redirect이다
-    - 서버에
-    - 변경사항을 만듦
-    - CRU
+    - 서버에 변경사항을 만듦
+    - CRUD 에서 CUD 역할을담당
     - '나 DB좀 변화시킬래~'
-
   
-
+  
+  
   - **사이트 간 요청 위조(Cross-site request forgery)**
     - 웹 애플리케이션 취약점 중 하나로 사용자가 자신의 의지와 무관하게 공격자가 의도한 행동을 하여 특정 웹페이지를 보안에 취약하게 하거나 수정, 삭제 등의 작업을 하게 만드는 공격 방법
     - Django는 CSRF에 대항하여 middleware와 template tag를 제공
     - CSRF라고도 함
-
   
-
+  
+  
   - **CSRF 공격 방어**
-
+  
     - **Secruity Token 사용 방식 (CSRF Token)**
-
+  
       - 사용자의 데이터에 임의의 난수 값을 부여해 매 요청마다 해당 난수 값을 포함시켜 전송시키도록함 
       - 이후 서버에서 요청을 받을때마다 전달된 token 값이 유효한지 검증
-
+  
     - 일반적으로 데이터 변경이 가능한 POST, PATCH, DELETE Method 등에 적용 (GET 제외)
-
+  
     - **Django는 CSRF token 템플릿 태그를 제공**
-
+  
       ```html
       {% csrf_token %}
       ```
-
+  
       ```html
       <input type="hidden" name="csrfmiddlewaretoken" value="난수값">
       ```
-
+  
       - CSRF 보호에 사용
-
+  
     - **CsrfViewMiddleware**
-
+  
       - CSRF 공격 관련 보안 설정
       - Middleware
         - 공통 서비스 및 기능을 애플리케이션에 제공하는 소프트웨어

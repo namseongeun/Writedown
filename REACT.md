@@ -467,7 +467,7 @@ export default App
 
 ## 9. Cleanup Function
 
-```react
+``` react
 // App.js
 import { useState, useEffect } from "react"
 

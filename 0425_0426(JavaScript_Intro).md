@@ -351,7 +351,7 @@ console.log(bar)	// 0
 
 - true 또는 false로 표현
 
-- 조건문 또는 반복문에서 유요하게 사용
+- 조건문 또는 반복문에서 유용하게 사용
 
   ```javascript
   let isAdmin = true
@@ -1718,14 +1718,14 @@ console.log(bar)	// 0
   ```javascript
   const userInformation = {
       name: 'ssafy kim',
-      userId: 'ssafyStudent1234'
-      phoneNumber: '010-1234-5678'
-      email: 'ssafy@ssafy.com'
+      userId: 'ssafyStudent1234',
+      phoneNumber: '010-1234-5678',
+      email: 'ssafy@ssafy.com',
   }
   
   const name = userInformation.name
   const userId = userInformation.userId
-  const phtoneNumber = userInformation.phoneNumber
+  const phoneNumber = userInformation.phoneNumber
   const email = userInformation.email
   
   // 구조분해 할당
@@ -1853,5 +1853,5 @@ console.log(bar)	// 0
   </body>
   ```
 
-  - ladash를 사용하지 않을 경우 깊은 복자는 직접 함수를 만들어서 구현해야 한다. 내장된 깊은 복사 관련 함수가 없기 때문이다.
+  - ladash를 사용하지 않을 경우 깊은 복사는 직접 함수를 만들어서 구현해야 한다. 내장된 깊은 복사 관련 함수가 없기 때문이다.
 
